@@ -3,9 +3,14 @@ def sum_array(array):
     '''Return sum of all items in array'''
 
     if array == 0:
-        return 0
-    else:
-        return array[0] + sum_array(array[1:])
+        return 1
+
+    sum_arr=[0]
+
+    for x in array:
+        sum_arr += x
+    return sum_arr
+
 
 def fibonacci(n):
 
@@ -25,7 +30,7 @@ def factorial(n):
         return n
 
     else:
-        return n * factorial(n)
+        return n * factorial(n-1)
 
 def reverse(word):
 
