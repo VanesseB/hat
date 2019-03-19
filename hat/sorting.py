@@ -26,7 +26,7 @@ def merge_sort(items):
     i1 = merge_sort(items[:mid_point])
     i2 = merge_sort(items[mid_point:])
 
-    return merge(i1, i2)
+    return i1 + i2
 
 def quick_sort(items):
 
@@ -37,7 +37,7 @@ def quick_sort(items):
     if len_i <= 1:
         return items
 
-    pivot = items[index]
+    pivot = items[0]
     small = []
     large = []
     dup = []
