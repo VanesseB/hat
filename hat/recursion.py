@@ -29,8 +29,14 @@ def factorial(n):
     if n == 1:
         return n
 
-    else:
-        return n * factorial(n-1)
+    result = 1
+    count = 2
+
+    while count <= n:
+        result = result * count
+        count = count + 1
+
+    return result
 
 def reverse(word):
 

@@ -16,17 +16,22 @@ def merge_sort(items):
 
     '''Return array of items, sorted in ascending order'''
 
-    len_i = len(items)
-
-    if len_i == 1:
+    if len(items) < 2:
         return items
-
-    mid_point = int(len_i / 2)
-
-    i1 = merge_sort(items[:mid_point])
-    i2 = merge_sort(items[mid_point:])
-
-    return (i1, i2)
+    result = []
+    mid = int(len(items) / 2)
+    y = merge_sort(items[:mid])
+    z = merge_sort(items[mid:])
+    while (len(y) > 0) and (len(z) > 0):
+        if y[0] > z[0]:
+            result.append(z[0])
+            z.pop(0)
+        else:
+            result.append(y[0])
+            y.pop(0)
+    result += y
+    result += z
+    return result
 
 def quick_sort(items):
 
