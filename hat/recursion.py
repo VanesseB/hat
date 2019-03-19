@@ -5,7 +5,7 @@ def sum_array(array):
     if array == 0:
         return 1
 
-    sum_arr=[0]
+    sum_arr=0
 
     for x in array:
         sum_arr += x
@@ -26,7 +26,7 @@ def factorial(n):
 
     '''Return n!'''
 
-    if n == 0:
+    if n == 1:
         return n
 
     else:

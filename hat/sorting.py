@@ -26,7 +26,7 @@ def merge_sort(items):
     i1 = merge_sort(items[:mid_point])
     i2 = merge_sort(items[mid_point:])
 
-    return len_i(i1, i2)
+    return (i1, i2)
 
 def quick_sort(items):
 
